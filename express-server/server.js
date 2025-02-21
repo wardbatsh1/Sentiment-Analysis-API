@@ -1,14 +1,13 @@
 const express = require('express');
 const axios = require('axios');
-const cors = require('cors'); // Import CORS middleware
+const cors = require('cors'); 
 
 const app = express();
-app.use(express.json()); // Middleware to parse JSON request bodies
-app.use(cors()); // Enable CORS for frontend access
-
+app.use(express.json()); 
+app.use(cors()); 
 const PORT = 4000;
 
-// Route to analyze sentiment
+
 app.post('/analyze-sentiment', async (req, res) => {
   const { text } = req.body;
   
@@ -17,7 +16,7 @@ app.post('/analyze-sentiment', async (req, res) => {
   }
 
   try {
-    // Forward request to Flask API
+   
     const flaskResponse = await axios.post('http://localhost:5000/predict', { text });
 
     return res.json(flaskResponse.data);
@@ -28,7 +27,7 @@ app.post('/analyze-sentiment', async (req, res) => {
   }
 });
 
-// Start Express server
+
 app.listen(PORT, () => {
   console.log(`Express server is running on http://localhost:${PORT}`);
 });
