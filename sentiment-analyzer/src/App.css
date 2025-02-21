@@ -1,42 +1,41 @@
-/* Global Styles */
+
 body {
-  background-color: #FCE4EC; /* Soft nude pink background */
+  background-color: #FCE4EC; 
   font-family: 'Poppins', sans-serif;
-  color: #5D3A3A; /* Dark brownish-pink for text */
+  color: #5D3A3A; 
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
-/* Main Container */
 .app-container {
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
-  background: #FFF0F5; /* Light nude pink */
+  background: #FFF0F5; 
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-/* Heading */
+
 h1 {
-  color: #D88C9A; /* Muted pink */
+  color: #D88C9A; 
   font-size: 2em;
   margin-bottom: 20px;
 }
 
-/* Textbox Styling */
+
 textarea {
-  width: 80%;  /* Reduce width */
-  max-width: 500px;  /* Set a max width */
-  height: 80px;  /* Set a fixed height */
+  width: 80%;  
+  max-width: 500px;  
+  height: 80px;  
   padding: 10px;
   border: 2px solid #E9AFA3;
   border-radius: 8px;
-  background-color: #FFF5F7; /* Lightest pink */
+  background-color: #FFF5F7; 
   font-size: 1rem;
-  resize: vertical; /* Allow resizing vertically */
+  resize: vertical; 
   outline: none;
 }
 
@@ -44,10 +43,9 @@ textarea:focus {
   border-color: #D88C9A;
 }
 
-/* Button Styling */
 button {
   margin-top: 15px;
-  background-color: #E9AFA3; /* Nude pink */
+  background-color: #E9AFA3; 
   color: white;
   border: none;
   padding: 10px 20px;
@@ -61,20 +59,20 @@ button:hover {
   background-color: #D88C9A;
 }
 
-/* Sentiment Display */
+
 .sentiment {
   margin-top: 20px;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-/* Error Message */
+
 .error {
   color: red;
   font-weight: bold;
 }
 
-/* Responsive Design */
+
 @media (max-width: 600px) {
   .app-container {
     width: 90%;

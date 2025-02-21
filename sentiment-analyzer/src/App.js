@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 function App() {
-  const [text, setText] = useState(""); // Stores user input
-  const [sentiment, setSentiment] = useState(null); // Stores API response
-  const [loading, setLoading] = useState(false); // Loading state
-  const [error, setError] = useState(null); // Error handling
+  const [text, setText] = useState(""); 
+  const [sentiment, setSentiment] = useState(null); 
+  const [loading, setLoading] = useState(false); 
+  const [error, setError] = useState(null); 
 
-  // Function to send text to Express APIs
+  
   const analyzeSentiment = async () => {
     if (!text.trim()) {
       setError("Please enter some text!");

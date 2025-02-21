@@ -3,12 +3,12 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from flask_cors import CORS
 import logging
 
-# Initialize Flask app and sentiment analyzer
+
 app = Flask(__name__)
-CORS(app)  # Enable CORS for frontend requests
+CORS(app)  
 analyzer = SentimentIntensityAnalyzer()
 
-# Configure logging
+
 logging.basicConfig(level=logging.INFO)
 
 @app.route('/predict', methods=['POST'])
@@ -26,14 +26,14 @@ def predict_sentiment():
         app.logger.error("Empty text received")
         return jsonify({"error": "Empty text"}), 400
 
-    # Get sentiment scores
+
     scores = analyzer.polarity_scores(text)
     compound_score = scores["compound"]
 
-    # Determine sentiment category
+    
     sentiment = "positive" if compound_score >= 0.05 else "negative" if compound_score <= -0.05 else "neutral"
 
-    # Log request and response
+    
     app.logger.info(f"Text: '{text}' | Sentiment: {sentiment}")
 
     return jsonify({"sentiment": sentiment})
